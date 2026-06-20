@@ -1,3 +1,6 @@
 {
-  "item.mattersbalance.antishard": "Anti Matter Shard"
+  "item.mattersbalance.antishard": "Anti-Matter Shard",
+
+  "block.mattersbalance.anti_ore": "Anti-Matter Ore",
+  "block.mattersbalance.deep_anti_ore": "Deepslate Anti-Matter Ore"
 }

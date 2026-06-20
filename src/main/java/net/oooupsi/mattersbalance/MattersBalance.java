@@ -2,6 +2,7 @@ package net.oooupsi.mattersbalance;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.fml.ModList;
+import net.oooupsi.mattersbalance.block.ModBlocks;
 import net.oooupsi.mattersbalance.item.ModItems;
 import org.slf4j.Logger;
 
@@ -37,6 +38,7 @@ public class MattersBalance {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -53,6 +55,11 @@ public class MattersBalance {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ANTI);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.ANTI_ORE);
+            event.accept(ModBlocks.DEEP_ANTI_ORE);
         }
     }
 
